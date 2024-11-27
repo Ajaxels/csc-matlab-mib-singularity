@@ -12,9 +12,9 @@ Singularity container with MATLAB R2024b and Python 3.11 environment to run MIB 
 * Signal Processing Toolbox
 
 **Python extras**
-* >> pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-* >> pip3 install hydra-core
-* >> pip3 install iopath
+* > pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+* > pip3 install hydra-core
+* > pip3 install iopath
 
 **MIB for MATLAB**
 
@@ -26,6 +26,7 @@ Download links:
 * https://github.com/Ajaxels/MIB2
 
 **Segment-anything instructions**
+
 Segment-anything should be installed to 
 */scratch/project_XXXXXXX/Python/segment-anything*
 from: 
