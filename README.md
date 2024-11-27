@@ -1,12 +1,44 @@
 # csc-matlab-mib-singularity
-CSC Matlab installation for MIB
+Singularity container with MATLAB R2024b and Python 3.11 environment to run MIB with segment-anything
 
-MIB: 
+**MATLAB TOOLBOXES**
+* Computer Vision Toolbox
+* Deep Learning Toolbox
+* Image Processing Toolbox
+* Statistics and Machine Learning Toolbox
+* Parallel Computing Toolbox
+* Medical Imaging Toolbox
+* Optimization Toolbox
+* Signal Processing Toolbox
 
-https://mib.helsinki.fi/downloads.html
+**Python extras**
+* >> pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+* >> pip3 install hydra-core
+* >> pip3 install iopath
 
-https://github.com/Ajaxels/MIB2
+**MIB for MATLAB**
 
-Segment-anything instructions:
+Sould be installed to 
+*/scratch/project_XXXXXXX/MIB*
+
+Download links:
+* https://mib.helsinki.fi/downloads.html
+* https://github.com/Ajaxels/MIB2
+
+**Segment-anything instructions**
+Segment-anything should be installed to 
+*/scratch/project_XXXXXXX/Python/segment-anything*
+from: 
+>> git clone https://github.com/Ajaxels/segment-anything-2.git
+
+Full installation details:
 
 https://mib.helsinki.fi/downloads_systemreq_sam2.html
+
+**Additional configurations**
+
+* Create a folder for deep learning architectures: */scratch/project_XXXXXXX/DeepMIB_temp/*
+* Start MIB and configure the directories and location of Python environment
+* Close MIB
+* Copy "mib.mat" file to "mib_prefs_override.mat" file under */scratch/project_XXXXXXX/MIB*
+  
