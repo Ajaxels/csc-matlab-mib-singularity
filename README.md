@@ -16,6 +16,13 @@ Container definition with MATLAB R2024b and Python 3.11 environment to run MIB w
 * `pip3 install hydra-core iopath`
 
 In Puhti, container is installed to `/projappl/project_2012193/lib` and wrapper script to `/projappl/project_2012193/bin`.
+In order to use MATLAB, `MLM_LICENSE_FILE` environment variable before starting the container.
+Usage:
+
+```bash
+export MLM_LICENSE_FILE="value here"
+/projappl/project_2012193/bin/matlab-mib matlab
+```
 
 **MIB for MATLAB**
 
