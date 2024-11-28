@@ -1,5 +1,5 @@
 # csc-matlab-mib-singularity
-Singularity container with MATLAB R2024b and Python 3.11 environment to run MIB with segment-anything
+Container definition with MATLAB R2024b and Python 3.11 environment to run MIB with segment-anything
 
 **MATLAB TOOLBOXES**
 * Computer Vision Toolbox
@@ -12,9 +12,10 @@ Singularity container with MATLAB R2024b and Python 3.11 environment to run MIB 
 * Signal Processing Toolbox
 
 **Python extras**
-* > pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-* > pip3 install hydra-core
-* > pip3 install iopath
+* `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`
+* `pip3 install hydra-core iopath`
+
+In Puhti, container is installed to `/projappl/project_2012193/lib` and wrapper script to `/projappl/project_2012193/bin`.
 
 **MIB for MATLAB**
 
