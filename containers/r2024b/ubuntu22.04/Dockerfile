@@ -100,8 +100,8 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 
 # Install python dependencies
 RUN python3 -m pip install --no-cache-dir --upgrade pip && \
-    python3 -m pip install --no-cache-dir iopath hydra-core torch && \
-    python3 -m pip install --no-cache-dir torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+    python3 -m pip install --no-cache-dir iopath hydra-core && \
+    python3 -m pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
 
 # Do not add user site-packages directory to sys.path
