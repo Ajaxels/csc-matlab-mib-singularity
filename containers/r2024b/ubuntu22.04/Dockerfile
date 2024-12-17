@@ -91,6 +91,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
         python${PYTHON_VERSION} \
         python${PYTHON_VERSION}-dev \
         python3-pip \
+        git \
         && \
     apt-get --yes clean && \
     apt-get --yes autoremove && \
@@ -101,8 +102,11 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 # Install python dependencies
 RUN python3 -m pip install --no-cache-dir --upgrade pip && \
     python3 -m pip install --no-cache-dir iopath hydra-core && \
-    python3 -m pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
+    python3 -m pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 && \
+    python3 -m pip install --no-cache-dir opencv-python onnxruntime onnx onnxruntime-gpu==1.19.2 && \
+    python3 -m pip install --no-cache-dir "git+https://github.com/facebookresearch/segment-anything.git" && \
+    python3 -m pip install --no-cache-dir "git+https://github.com/facebookresearch/segment-anything-2.git"
+ 
 
 # Do not add user site-packages directory to sys.path
 ENV PYTHONNOUSERSITE="1"
