@@ -41,6 +41,7 @@ MATLAB_SING_FLAGS="$MATLAB_SING_FLAGS -B /run:/run"
 # Bind managed mathworks servicehost
 if [ -d /appl/soft/math/mathworksservicehost ]; then
     MATLAB_SING_FLAGS="$MATLAB_SING_FLAGS -B /appl/soft/math/mathworksservicehost"
+    export MATHWORKS_SERVICE_HOST_MANAGED_INSTALL_ROOT=/appl/soft/math/mathworksservicehost
 fi
 
 # Enable Nvidia GPUs
